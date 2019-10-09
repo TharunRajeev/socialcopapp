@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activities.PostActivity">
+
+
+
+
+        <Button
+            android:id="@+id/submitpostid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Post"
+            android:layout_gravity="end"
+
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/parentpostlayoutid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            >
+
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/chosecategoryid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Choose A Category"
+            />
+
+
+        <ImageView
+            android:id="@+id/previewimageid"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+
+        <ProgressBar
+            android:id="@+id/postuploadprogressbarid"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/enterdescriptionid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter description"
+            />
+
+
+
+        <ImageButton
+            android:id="@+id/opencamerabuttonid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_camera_black_24dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
