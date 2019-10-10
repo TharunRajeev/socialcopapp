@@ -86,7 +86,7 @@ public class ProfileFragment extends Fragment {
                 if(response.isSuccessful()){
 
                     Glide.with(context).load(response.body().getProfile()).into(userProfileImageView);
-                    userProfileTextView.setText(response.body().getName());
+                    userProfileTextView.setText(response.body().getFirstname());
 
                 }
             }
@@ -97,7 +97,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        Call<List<Post>> userPosts = retrofit.create(PostApi.class).getPosts(null,"1234",null,null,null);
+        Call<List<Post>> userPosts = retrofit.create(PostApi.class).getPosts(null,"tharun",null,null,null);
 
         userPosts.enqueue(new Callback<List<Post>>() {
             @Override

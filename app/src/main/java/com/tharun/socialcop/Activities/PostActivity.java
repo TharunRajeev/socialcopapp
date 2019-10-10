@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.tharun.socialcop.Components.CurrentPost;
+import com.tharun.socialcop.Fragments.SelectFragment;
 import com.tharun.socialcop.Interfaces.MediaApi;
 import com.tharun.socialcop.Interfaces.PostApi;
 import com.tharun.socialcop.Models.Category;
@@ -71,8 +73,9 @@ public class PostActivity extends AppCompatActivity {
 
     ProgressBar postUploadProgressBar;
 
+    SelectFragment selectFragment = new SelectFragment();
 
-    public static Category category;
+    public static Category category = new Category(null,null);
 
     Retrofit retrofit = RetrofitInstance.getRetrofitInstance(PostActivity.this);
 
@@ -135,6 +138,13 @@ public class PostActivity extends AppCompatActivity {
 
 
 
+        chooseCategoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectFragment.show(getSupportFragmentManager(),"dialog");
+            }
+        });
+
         openCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -188,7 +198,7 @@ public class PostActivity extends AppCompatActivity {
                                         public void onResponse(Call<String> call, Response<String> response) {
                                             if(response.isSuccessful()){
 
-                                                Post post = new Post(prntid,enterDescription.getText().toString(),null,null,image,type);
+                                                Post post = new Post(prntid,enterDescription.getText().toString(),category.getTitle(),null,image,type);
 
                                                 uploadPost(post);
 
@@ -226,7 +236,7 @@ public class PostActivity extends AppCompatActivity {
 
                 }else{
 
-                        uploadPost(new Post(prntid,enterDescription.getText().toString(),"awd","Mumbai",null,type));
+                        uploadPost(new Post(prntid,enterDescription.getText().toString(),category.getTitle(),"Mumbai",null,type));
 
                 }
 
@@ -324,36 +334,29 @@ public class PostActivity extends AppCompatActivity {
 
     }
 
+    public void dismiss(){
+        selectFragment.dismiss();
+        chooseCategoryButton.setText(category.getTitle());
+    }
+
+
 
     private File saveBitmap(Bitmap bitmap){
 
 
-        File file = new File(getCacheDir(),"xyz.jpeg");
+        String filename = "pippo.png";
+        File sd = Environment.getExternalStorageDirectory();
+        File dest = new File(sd, filename);
 
         try {
-
-            file.createNewFile();
-
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
-            bitmap.compress(Bitmap.CompressFormat.PNG,100,byteArrayOutputStream);
-
-            byte[] bitmapBytes = byteArrayOutputStream.toByteArray();
-
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-
-            fileOutputStream.write(bitmapBytes);
-            fileOutputStream.flush();
-            fileOutputStream.close();
-
-
-
-
-        } catch (IOException e) {
+            FileOutputStream out = new FileOutputStream(dest);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
+            out.flush();
+            out.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return file;
+        return dest;
     }
 
 }

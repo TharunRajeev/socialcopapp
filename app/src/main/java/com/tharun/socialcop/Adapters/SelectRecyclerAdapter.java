@@ -49,7 +49,7 @@ public class SelectRecyclerAdapter extends RecyclerView.Adapter<SelectRecyclerAd
 
                 PostActivity.category = category;
 
-                ((PostActivity) context).setPosition(2);
+                ((PostActivity)context).dismiss();
 
             }
         });

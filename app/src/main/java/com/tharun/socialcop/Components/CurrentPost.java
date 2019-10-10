@@ -80,9 +80,9 @@ public class CurrentPost extends CardView {
 
         createdAtText = itemView.findViewById(R.id.createdattextid);
 
-        usernameTextView.setText(post.getUser().getName());
+        usernameTextView.setText(post.getUser().getFirstname());
         Glide.with(context).load(post.getUser().getProfile()).into(userProfileImageView);
-        locationTextView.setText(post.getLocation());
+        locationTextView.setText("Chennai");
         Glide.with(context).load(post.getImage()).into(mediaImageView);
         tagTextView.setText(post.getCategory());
         descriptionTextView.setText(post.getDescription());

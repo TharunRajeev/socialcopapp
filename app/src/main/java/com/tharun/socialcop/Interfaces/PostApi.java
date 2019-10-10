@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 public interface PostApi {
 
     @GET("/post/posts")
-    Call<List<Post>> getPosts(@Query("parentid") String prntid, @Query("uid") String quid , @Query("type") String type , @Query("status") String status , @Query("accepted") String accepted);
+    Call<List<Post>> getPosts(@Query("parentid") String prntid, @Query("username") String username , @Query("type") String type , @Query("status") String status , @Query("accepted") String accepted);
 
     @GET("/post")
     Call<Post> getPost(@Query("pid") String pid);

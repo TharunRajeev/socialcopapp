@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -28,7 +30,20 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
+
+        SharedPreferences sharedPreferences = getSharedPreferences("DEFAULT_PREFERENCES", Context.MODE_PRIVATE);
+
+        if(!sharedPreferences.getBoolean("isLoggedIn",false)){
+            startActivity(new Intent(this,LoginActivity.class));
+            finish();
+        }
+
+
+
         homeBottomNavigationView  = findViewById(R.id.homebottomnavigationviewid);
+
+
+
 
 
         homeBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -56,6 +71,8 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+
+        homeBottomNavigationView.setSelectedItemId(R.id.homebottomnavigationviewid);
     }
 
     private void replaceFragment(Fragment fragment){
