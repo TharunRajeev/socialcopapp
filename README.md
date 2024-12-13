@@ -11,8 +11,8 @@ The complete understanding of Pothole app could be found over here []
 
 - [Pothole User Android App (Current)](https://github.com/TharunRajeev/socialcopapp)
 - [Pothole User Server (Private)](https://github.com/TharunRajeev/socialcopserver)
-- [Pothole Civil Authority Android App]
-- [Pothole Civil Authority Server (Private)]
+- [Pothole Civil Authority Android App](https://github.com/TharunRajeev/SocialCop-CivilAuthoritiesApp)
+- [Pothole Civil Authority Server (Private)](https://github.com/TharunRajeev/SocialCop-CivilAuthoritiesAppServer)
 
 This app is the frontend interface for User.
 
