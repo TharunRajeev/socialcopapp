@@ -9,10 +9,10 @@ The complete understanding of Pothole app could be found over here []
 
 ### Repo Links to other components : 
 
-- [Pothole User Android App (Current)](https://github.com/harshitshah4/PotholeUserAndroidApp)
-- [Pothole User Server (Private)](https://github.com/harshitshah4/PotholeUserServer)
-- [Pothole Civil Authority Android App](https://github.com/harshitshah4/PotholeCivilAuthorityAndroidApp)
-- [Pothole Civil Authority Server (Private)](https://github.com/harshitshah4/PotholeCivilAuthorityServer)
+- [Pothole User Android App (Current)](https://github.com/TharunRajeev/socialcopapp)
+- [Pothole User Server (Private)](https://github.com/TharunRajeev/socialcopserver)
+- [Pothole Civil Authority Android App]
+- [Pothole Civil Authority Server (Private)]
 
 This app is the frontend interface for User.
 
@@ -37,7 +37,7 @@ Android (Java) , Retrofit , Glide , etc.
 > Replace the BASE_URL in strings , with your server url.
 
 ## Screenshots
-<img src="https://github.com/harshitshah4/PotholeUserAndroidApp/blob/master/Screenshot1.png" align="left" width="30%" height="auto" alt="Screenshot of App"/>
-<img src="https://github.com/harshitshah4/PotholeUserAndroidApp/blob/master/Screenshot2.png" width="30%" height="auto" alt="Screenshot of App"/>
+<img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot1.png" align="left" width="30%" height="auto" alt="Screenshot of App"/>
+<img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot2.png" width="30%" height="auto" alt="Screenshot of App"/>
 
 > There are few fixes that are needed to be done , so before using it into production make sure of some fixes.
