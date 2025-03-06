@@ -35,7 +35,5 @@ Android (Java) , Retrofit , Glide , etc.
 > Replace the BASE_URL in strings , with your server url.
 
 ## Screenshots
-<img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot1.png" align="left" width="30%" height="auto" alt="Screenshot of App"/>
-<img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot2.png" width="30%" height="auto" alt="Screenshot of App"/>
-Watch the video here : [https://drive.google.com/file/d/1nK9rvR2pSUdCnShSxSHXVsypJCSNE8WD/view?usp=sharing]
+<img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/pothole.gif">
 > There are few fixes that are needed to be done , so before using it into production make sure of some fixes.
