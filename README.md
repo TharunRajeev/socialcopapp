@@ -37,5 +37,5 @@ Android (Java) , Retrofit , Glide , etc.
 ## Screenshots
 <img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot1.png" align="left" width="30%" height="auto" alt="Screenshot of App"/>
 <img src="https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot2.png" width="30%" height="auto" alt="Screenshot of App"/>
-
+[![Watch the video](https://github.com/TharunRajeev/socialcopapp/blob/first_commit/Screenshot2.png)](https://github.com/TharunRajeev/socialcopapp/blob/first_commit/pothole.mp4)
 > There are few fixes that are needed to be done , so before using it into production make sure of some fixes.
